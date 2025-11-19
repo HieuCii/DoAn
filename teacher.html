@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông tin giảng viên</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/teacher.css">
+
+
+</head>
+
+<body>
+    <!-- Thanh điều hướng -->
+    <header class="navbar">
+        <div class="logo">
+            🎓 Hệ thống Đăng ký Tín chỉ
+            <span>Trường Đại học X</span>
+        </div>
+
+        <!-- Thanh menu -->
+        <nav class="menu">
+            <div class="menu-left">
+                <button class="active"> Thông tin cá nhân</button>
+                <button onclick="window.location.href='monphutrach'">Môn học phụ trách</button>
+                <button onclick=" window.location.href='lichday.html'">Lịch dạy</button>
+            </div>
+            <div class="logout-btn">
+                <button class="fa-solid fa-right-from-bracket" onclick="window.location.href='login.html'"></button>
+            </div>
+            <!-- <a href="/logout" class="logout-btn">
+                <i class="fa-solid fa-right-from-bracket"></i>
+            </a> -->
+
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="info-card">
+            <h3>Thông tin Giảng viên</h3>
+            <p class="desc">Thông tin giảng viên</p>
+
+            <div class="info-grid">
+                <div class="col">
+                    <h4>Thông tin cá nhân</h4>
+                    <p><i class="fa-regular fa-user"></i> Họ và tên: <b>Trần Thị Mai Chi</b></p>
+                    <p><i class="fa-solid fa-id-card"></i> Mã giảng viên: <b>GV001</b></p>
+                    <p><i class="fa-regular fa-envelope"></i> Email: <b>gv001@university.edu.vn</b></p>
+                    <p><i class="fa-solid fa-phone"></i> Số điện thoại: <b>0900000000</b></p>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+</body>
+
+</html>

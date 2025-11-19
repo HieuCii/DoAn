@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thông tin giảng viên</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- css -->
+  <link rel="stylesheet" href="css/qtv.css">
+
+
+</head>
+
+<body>
+  <!-- Thanh điều hướng -->
+  <header class="navbar">
+    <div class="logo">
+      🎓 Hệ thống Đăng ký Tín chỉ
+      <span>Trường Đại học X</span>
+    </div>
+
+    <!-- Thanh menu -->
+    <nav class="menu">
+      <div class="menu-left">
+        <button class="active"> Quản lý sinh viên</button>
+        <button onclick="window.location.href='quanlymonhoc.html'">Quản lý môn học</button>
+      </div>
+      <div class="logout-btn">
+        <button class="fa-solid fa-right-from-bracket" onclick="window.location.href='login.html'"></button>
+      </div>
+      <!-- <a href="/logout" class="logout-btn">
+                <i class="fa-solid fa-right-from-bracket"></i>
+            </a> -->
+
+    </nav>
+  </header>
+
+
+  <section class="container">
+    <div class="tab">
+      <div class="slider"></div>
+      <button class="tab-btn active" id="qlSV">Quản lý Sinh viên</button>
+      <button class="tab-btn" id="ctK" onclick="window.location.href='ctkhung.html'"">Chương trình Khung</button>
+      <button class=" tab-btn" id="qlMh">Quản lý Môn học</button>
+      <button class="tab-btn" id="qlHp">Quản lý Học phí</button>
+    </div>
+
+    <div class="title">
+      <h2>Quản lý Sinh viên</h2>
+      <button id="btnAdd"><i class="fa fa-user-plus"></i> Thêm sinh viên</button>
+    </div>
+    <p>Thông tin và quản trị danh sách sinh viên</p>
+
+    <input type="text" id="searchInput" placeholder="Tìm kiếm sinh viên theo tên, mã SV, email, hoặc ngành học..." />
+
+    <div class="stats">
+      <div class="card">
+        <h3>Tổng số sinh viên</h3>
+        <span id="totalStudent">5</span>
+      </div>
+      <div class="card">
+        <h3>Đang hoạt động</h3>
+        <span id="activeStudent">4</span>
+      </div>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Mã SV</th>
+          <th>Họ và tên</th>
+          <th>Email</th>
+          <th>Chuyên ngành</th>
+          <th>Năm học</th>
+          <th>Trạng thái</th>
+          <th>Thao tác</th>
+        </tr>
+      </thead>
+      <tbody id="studentTable">
+      </tbody>
+    </table>
+  </section>
+
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <h3>Thêm sinh viên</h3>
+      <input type="text" id="masv" placeholder="Mã sinh viên">
+      <input type="text" id="fullname" placeholder="Họ tên">
+      <input type="email" id="email" placeholder="Email">
+      <input type="text" id="major" placeholder="Chuyên ngành">
+      <input type="text" id="year" placeholder="Năm học (1 - 4)">
+      <button onclick="addStudent()">Lưu</button>
+      <button class="cancel" onclick="closeModal()">Hủy</button>
+    </div>
+  </div>
+
+  <script src="js/qtv.js"></script>
+</body>
+
+</html>

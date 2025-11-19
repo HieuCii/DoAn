@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông tin Sinh viên | Hệ thống Đăng ký Tín chỉ</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- css -->
+    <!-- <link rel="stylesheet" href="css/student.css">
+    <link rel="stylesheet" href="css/style.css"> -->
+    <link rel="stylesheet" href="css/dangkymon.css">
+    <!-- <link rel="stylesheet" href="css/lichhoc.css"> -->
+
+
+
+</head>
+
+<body>
+    <!-- Thanh điều hướng -->
+    <header class="navbar">
+        <div class="logo">
+            🎓 Hệ thống Đăng ký Tín chỉ
+            <span>Trường Đại học X</span>
+        </div>
+
+        <!-- <nav class="menu">
+            <button class="active">Thông tin cá nhân</button>
+            <button>Đăng ký môn học</button>
+            <button>Lịch học</button>
+            <div class="user">1233 ▸</div>
+        </nav> -->
+        <nav class="menu">
+            <div class="menu-left">
+                <button onclick="window.location.href='student.html'"">Thông tin cá nhân</button>
+                <button class=" active">Đăng ký môn học</button>
+                <button onclick=" window.location.href='lichhoc.html'"">Lịch học</button>
+            </div>
+
+            <div class=" logout-btn">
+                    <button class="fa-solid fa-right-from-bracket" onclick="window.location.href='login.html'"></button>
+            </div>
+            <!-- <button id="user" class="user" onclick="window.location.href='login.html'"">Nguyễn Văn A</button> -->
+            <!-- <a class=" user" href="login.html">Nguyễn Văn</a> -->
+        </nav>
+
+
+
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <h2>Đăng ký Môn học</h2>
+            <p>Chọn lớp học bạn muốn đăng ký trong học kỳ này.</p>
+
+            <input type="text" class="search" placeholder="🔎 Tìm kiếm môn học theo tên, mã môn, hoặc giảng viên..."
+                id="searchInput">
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Mã môn</th>
+                            <th>Tên môn học</th>
+                            <th>Tín chỉ</th>
+                            <th>Giảng viên</th>
+                            <th>Lịch học</th>
+                            <th>Phòng</th>
+                            <th>Sĩ số</th>
+                            <th>Trạng thái</th>
+                            <th>Thao tác</th>
+                        </tr>
+                    </thead>
+
+                    <!-- <tbody id="courseTable">
+                        <tr>
+                            <td>CS101</td>
+                            <td>Nhập môn Khoa học Máy tính</td>
+                            <td>3</td>
+                            <td>TS. Nguyễn Văn A</td>
+                            <td>⏱ Thứ 2, Thứ 4 (7:00-9:00)</td>
+                            <td>📍 A101</td>
+                            <td>👥 45/60</td>
+                            <td><span class="badge success">Còn chỗ</span></td>
+                            <td><button class="btn-register">Đăng ký</button></td>
+                        </tr>
+                        <tr>
+                            <td>CS201</td>
+                            <td>Cấu trúc Dữ liệu và Giải thuật</td>
+                            <td>4</td>
+                            <td>PGS.TS. Trần Thị B</td>
+                            <td>⏱ Thứ 3, Thứ 5 (9:00-11:00)</td>
+                            <td>📍 B205</td>
+                            <td>👥 50/50</td>
+                            <td><span class="badge danger">Đầy</span></td>
+                            <td><button class="btn-register disabled">Đăng ký</button></td>
+                        </tr>
+                    </tbody> -->
+
+                    <tbody id="courseTable">
+                        <tr>
+                            <td>CS101</td>
+                            <td>Nhập môn Khoa học Máy tính</td>
+                            <td>3</td>
+                            <td>TS. Nguyễn Văn A</td>
+                            <td><i class="fa-regular fa-clock"></i> Thứ 2, Thứ 4 (7:00-9:00)</td>
+                            <td><i class="fa-solid fa-location-dot"></i> A101</td>
+                            <!-- <td><i class="fa-solid fa-users"></i> 45/60</td> -->
+                            <td><i class="fa-solid fa-users"></i> <span class="slot">45</span>/60</td>
+                            <td><span class="badge success">Còn chỗ</span></td>
+                            <td><button class="btn-register">Đăng ký</button></td>
+                        </tr>
+
+                        <tr>
+                            <td>CS201</td>
+                            <td>Cấu trúc Dữ liệu và Giải thuật</td>
+                            <td>4</td>
+                            <td>PGS.TS. Trần Thị B</td>
+                            <td><i class="fa-regular fa-clock"></i> Thứ 3, Thứ 5 (9:00-11:00)</td>
+                            <td><i class="fa-solid fa-location-dot"></i> B205</td>
+                            <!-- <td><i class="fa-solid fa-users"></i> 50/50</td> -->
+                            <td><i class="fa-solid fa-users"></i> <span class="slot">50</span>/50</td>
+                            <td><span class="badge danger">Đầy</span></td>
+                            <td><button class="btn-register disabled">Đăng ký</button></td>
+                            </td>
+                        </tr>
+                    </tbody>
+
+
+                </table>
+            </div>
+        </section>
+    </main>
+    <!-- js -->
+    <!-- <script src="js/script.js"></script>
+    <script src="js/student.js"></script> -->
+    <script src="js/dangkymon.js"></script>
+    <!-- <script src="js/lichhoc.js"></script> -->
+
+</body>
+
+</html>

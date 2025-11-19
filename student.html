@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông tin Sinh viên | Hệ thống Đăng ký Tín chỉ</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/student.css">
+    <!-- <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dangkymon.css">
+    <link rel="stylesheet" href="css/lichhoc.css"> -->
+    <!-- js -->
+    <script src="js/script.js"></script>
+    <script src="js/student.js"></script>
+    <script src="js/dangkymon.js"></script>
+    <script src="js/lichhoc.js"></script>
+
+
+
+
+
+</head>
+
+<body>
+    <!-- Thanh điều hướng -->
+    <header class="navbar">
+        <div class="logo">
+            🎓 Hệ thống Đăng ký Tín chỉ
+            <span>Trường Đại học X</span>
+        </div>
+
+        <!-- <nav class="menu">
+            <button class="active">Thông tin cá nhân</button>
+            <button>Đăng ký môn học</button>
+            <button>Lịch học</button>
+            <div class="user">1233 ▸</div>
+        </nav> -->
+        <nav class="menu">
+            <div class="menu-left">
+                <button class="active">Thông tin cá nhân</button>
+                <button onclick="window.location.href='dangkymon.html'"">Đăng ký môn học</button>
+                <button onclick=" window.location.href='lichhoc.html'"">Lịch học</button>
+            </div>
+
+            <div class="logout-btn">
+                <button class="fa-solid fa-right-from-bracket" onclick="window.location.href='login.html'"></button>
+            </div>
+            <!-- <button class="user" onclick="window.location.href='login.html'"">Nguyễn Văn A</button> -->
+            <!-- <a class=" user" href="login.html">Nguyễn Văn</a> -->
+        </nav>
+    </header>
+
+    <main class="container">
+        <!-- Thông tin sinh viên -->
+        <section class="info-card">
+            <h3>Thông tin Sinh viên</h3>
+            <p class="desc">Thông tin cá nhân và học tập</p>
+            <div class="info-grid">
+
+                <!-- <div class="col">
+                    <h4>Thông tin cá nhân</h4>
+                    <p>👤 Họ và tên: <b>Nguyễn Văn A</b></p>
+                    <p>🆔 Mã sinh viên: <b>SV001</b></p>
+                    <p>📧 Email: <b>sv001@university.edu.vn</b></p>
+                    <p>📞 Số điện thoại: <b>0900000000</b></p>
+                </div> -->
+
+                <div class="col">
+                    <h4>Thông tin cá nhân</h4>
+                    <p><i class="fa-regular fa-user"></i> Họ và tên: <b>Nguyễn Văn A</b></p>
+                    <p><i class="fa-solid fa-id-card"></i> Mã sinh viên: <b>SV001</b></p>
+                    <p><i class="fa-regular fa-envelope"></i> Email: <b>sv001@university.edu.vn</b></p>
+                    <p><i class="fa-solid fa-phone"></i> Số điện thoại: <b>0900000000</b></p>
+                </div>
+
+
+
+                <!-- <div class="col">
+                    <h4>Thông tin học tập</h4>
+                    <p>🏫 Ngành học: <b>Khoa học Máy tính</b></p>
+                    <p>🎓 Khóa học: <b>K2022</b></p>
+                    <p>📊 Điểm trung bình (GPA): <b class="highlight">3.20</b></p>
+                    <p>📘 Trạng thái: <span class="status">Đang học</span></p>
+                </div> -->
+
+                <div class="col">
+                    <h4>Thông tin học tập</h4>
+                    <p><i class="fa-solid fa-building-columns"></i> Ngành học: <b>Khoa học Máy tính</b></p>
+                    <p><i class="fa-solid fa-graduation-cap"></i> Khóa học: <b>K2022</b></p>
+                    <p><i class="fa-solid fa-chart-line"></i> Điểm trung bình (GPA): <b class="highlight">3.20</b></p>
+                    <p><i class="fa-solid fa-book"></i> Trạng thái: <span class="status">Đang học</span></p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Thành tích học tập -->
+        <section class="stats">
+            <h3>Thành tích học tập</h3>
+            <p class="desc">Tổng quan về kết quả học tập</p>
+            <div class="stat-box">
+                <div class="item">
+                    <h2>3.20</h2>
+                    <p>GPA</p>
+                </div>
+                <div class="item">
+                    <h2>60</h2>
+                    <p>Tín chỉ đã tích lũy</p>
+                </div>
+                <div class="item">
+                    <h2>140</h2>
+                    <p>Tín chỉ yêu cầu</p>
+                </div>
+                <div class="item">
+                    <h2>43%</h2>
+                    <p>Hoàn thành</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Học phí -->
+        <section class="tuition">
+            <h3>Thông tin Học phí</h3>
+            <p class="desc">Chi tiết học phí và thanh toán</p>
+            <div class="tuition-grid">
+                <div>
+                    💰 Học phí mỗi tín chỉ: <b>500.000 VNĐ</b><br>
+                    📘 Tổng tín chỉ đã học: <b>60 tín chỉ</b>
+                </div>
+                <div class="right">
+                    💵 Tổng học phí đã đóng: <b class="blue">30.000.000 VNĐ</b><br>
+                    💵 Học phí còn lại (dự kiến): <b class="red">40.000.000 VNĐ</b>
+                </div>
+            </div>
+        </section>
+
+        <!-- Xếp loại -->
+        <!-- <section class="rank">
+            <h3>Xếp loại học tập</h3>
+            <div class="rank-box">
+                <span class="badge good">Giỏi</span>
+                <span>3.20 ≤ GPA &lt; 3.60</span>
+            </div>
+        </section> -->
+    </main>
+
+</body>
+
+</html>

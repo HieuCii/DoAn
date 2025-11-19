@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông tin giảng viên</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/lichday.css">
+
+
+</head>
+
+<body>
+    <!-- Thanh điều hướng -->
+    <header class="navbar">
+        <div class="logo">
+            🎓 Hệ thống Đăng ký Tín chỉ
+            <span>Trường Đại học X</span>
+        </div>
+
+        <!-- Thanh menu -->
+        <nav class="menu">
+            <div class="menu-left">
+                <!-- <button class="active"> Thông tin cá nhân</button> -->
+                <button onclick="window.location.href='monphutrach'">Môn học phụ trách</button>
+                <button class="active">Lịch dạy</button>
+            </div>
+            <div class="logout-btn">
+                <button class="fa-solid fa-right-from-bracket" onclick="window.location.href='login.html'"></button>
+            </div>
+            <!-- <a href="/logout" class="logout-btn">
+                <i class="fa-solid fa-right-from-bracket"></i>
+            </a> -->
+
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="schedule-wrapper">
+            <h2>Lịch dạy</h2>
+            <p>Thời khóa biểu các lớp học đã đăng ký</p>
+
+            <div class="schedule-grid">
+                <div class="cell header">Ca học</div>
+                <div class="cell header">Thứ 2</div>
+                <div class="cell header">Thứ 3</div>
+                <div class="cell header">Thứ 4</div>
+                <div class="cell header">Thứ 5</div>
+                <div class="cell header">Thứ 6</div>
+                <div class="cell header">Thứ 7</div>
+
+                <!-- SÁNG -->
+                <div class="cell time"><b>SÁNG</b><br><small>(7:00 - 11:00)</small></div>
+                <div class="cell class blue">
+                    <b>CS101 – Nhập môn Khoa học Máy tính</b><br>
+                    A101 – TS. Nguyễn Văn A
+                </div>
+                <div class="cell empty"></div>
+                <div class="cell class blue">
+                    <b>CS101 – Nhập môn Khoa học Máy tính</b><br>
+                    A101 – TS. Nguyễn Văn A
+                </div>
+                <div class="cell empty"></div>
+                <div class="cell class orange">
+                    <b>MATH201 – Toán Rời rạc</b><br>
+                    A203 – PGS. Hoàng Văn E
+                </div>
+                <div class="cell empty"></div>
+
+                <!-- CHIỀU -->
+                <div class="cell time"><b>CHIỀU</b><br><small>(13:00 - 17:00)</small></div>
+                <div class="cell class orange">
+                    <b>CS401 – Trí tuệ Nhân tạo</b><br>
+                    F301 – PGS.TS. Đặng Văn G
+                </div>
+                <div class="cell empty"></div>
+                <div class="cell empty"></div>
+                <div class="cell empty"></div>
+                <div class="cell class orange">
+                    <b>ENG301 – Tiếng Anh Chuyên ngành</b><br>
+                    E105 – ThS. Võ Thị F
+                </div>
+                <div class="cell empty"></div>
+            </div>
+        </div>
+
+        <div class="class-list-box">
+            <h3>Lớp học đang dạy:</h3>
+            <ul class="class-list">
+                <li><span class="dot c-blue"></span>CS101 – Nhập môn Khoa học Máy tính</li>
+                <li><span class="dot c-orange"></span>CS301 – Cơ sở Dữ liệu</li>
+                <li><span class="dot c-purple"></span>CS302 – Lập trình Web</li>
+                <li><span class="dot c-orange"></span>MATH201 – Toán Rời rạc</li>
+                <li><span class="dot c-orange"></span>ENG301 – Tiếng Anh Chuyên ngành</li>
+                <li><span class="dot c-orange"></span>CS401 – Trí tuệ Nhân tạo</li>
+            </ul>
+        </div>
+
+        <div class="stats-box">
+            <div class="stat">
+                <div class="value">6</div>
+                <div class="label">Lớp học</div>
+            </div>
+            <div class="stat">
+                <div class="value">12</div>
+                <div class="label">Buổi học/tuần</div>
+            </div>
+            <div class="stat">
+                <div class="value">5</div>
+                <div class="label">Ngày học/tuần</div>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>

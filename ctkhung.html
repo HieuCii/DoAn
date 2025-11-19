@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chương trình khung</title>
+  <link rel="stylesheet" href="css/ctkhung.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- Thanh điều hướng -->
+  <header class="navbar">
+    <div class="logo">
+      🎓 Hệ thống Đăng ký Tín chỉ
+      <span>Trường Đại học X</span>
+    </div>
+
+    <!-- Thanh menu -->
+    <nav class="menu">
+      <div class="menu-left">
+        <button class="active"> Quản lý sinh viên</button>
+        <button onclick="window.location.href='quanlymonhoc.html'">Quản lý môn học</button>
+      </div>
+      <div class="logout-btn">
+        <button class="fa-solid fa-right-from-bracket" onclick="window.location.href='login.html'"></button>
+      </div>
+    </nav>
+  </header>
+
+
+
+  <!-- Tabs -->
+  <section class="container">
+    <div class="tab">
+      <div class="slider"></div>
+      <button class="tab-btn" id="qlSV" onclick="window.location.href='qtv.html'"">Quản lý Sinh viên</button>
+      <button class=" tab-btn active" id="ctK">Chương trình Khung</button>
+      <button class="tab-btn" id="qlMh">Quản lý Môn học</button>
+      <button class="tab-btn" id="qlHp">Quản lý Học phí</button>
+    </div>
+    <div class="header">
+      <div>
+        <h2>Chương trình Khung</h2>
+        <p>Quản lý môn học bắt buộc theo từng ngành và học kỳ</p>
+      </div>
+      <button class="btn-add"><i class="fa fa-plus"></i> Thêm môn học</button>
+    </div>
+
+    <!-- Filters -->
+    <div class="filters">
+      <select>
+        <option>Khoa học Máy tính</option>
+        <option>Công nghệ Thông tin</option>
+        <option>An toàn thông tin</option>
+      </select>
+
+      <select>
+        <option>Tất cả học kỳ</option>
+        <option>Học kỳ 1</option>
+        <option>Học kỳ 2</option>
+      </select>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats">
+      <div class="card">
+        <h4>Tổng số tín chỉ</h4>
+        <span>150</span>
+      </div>
+      <div class="card">
+        <h4>Môn học bắt buộc</h4>
+        <span>16</span>
+      </div>
+      <div class="card">
+        <h4>Tín chỉ bắt buộc</h4>
+        <span class="green">53</span>
+      </div>
+    </div>
+
+    <!-- Table -->
+    <div class="semester">
+      <h3>Học kỳ 1 <span>5 môn học - 17 tín chỉ</span></h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Mã môn</th>
+            <th>Tên môn học</th>
+            <th>Tín chỉ</th>
+            <th>Thao tác</th>
+          </tr>
+        </thead>
+        <tbody id="courseTable">
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <script src="js/ctkhung.js"></script>
+</body>
+
+</html>
